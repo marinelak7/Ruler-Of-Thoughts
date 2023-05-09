@@ -19,11 +19,6 @@ public class Menu extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
     }
 
-    public void viewStatistics(View view) {
 
-        Intent i = new Intent(this, Statistics.class);
-        startActivity(i);
-
-    }
 
 }

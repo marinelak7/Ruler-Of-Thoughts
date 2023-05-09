@@ -21,6 +21,7 @@
         android:id="@+id/button2"
         android:layout_width="227dp"
         android:layout_height="55dp"
+        android:onClick="viewStatistics"
         android:text="View Statistics"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
