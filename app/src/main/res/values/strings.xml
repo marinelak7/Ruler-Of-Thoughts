@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MasterMinds</string>
+    <string-array name="colors">
+        <item>-No Selection</item>
+        <item>-Red</item>
+        <item>-Blue</item>
+        <item>-Orange</item>
+        <item>-Yellow</item>
+        <item>-Green</item>
+        <item>-Gray</item>
+        <item>-White</item>
+        <item>-Purple</item>
+    </string-array>
 </resources>

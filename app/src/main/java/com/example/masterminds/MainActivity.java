@@ -29,12 +29,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void newGame(View view)
+    {
+        Intent i = new Intent(MainActivity.this, ChooseDifficultyMenuVer1.class);
+        startActivity(i);
+    }
+
     public void viewStatistics(View view) {
 
         Intent i = new Intent(this, Statistics.class);
         startActivity(i);
     }
 
+
+    public void viewRules(View view)
+    {
+        Intent i = new Intent(this, rules.class);
+        startActivity(i);
+    }
 
 
 
