@@ -97,12 +97,13 @@
         android:id="@+id/imageButton3"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:background="#EFEFEF"
         android:contentDescription="Quit Game"
+        android:onClick="viewRules"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/transparent_questionmark"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        android:onClick="viewRules"
         app:layout_constraintTop_toTopOf="parent" />
 
 
