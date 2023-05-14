@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioGroup
+        android:id="@+id/colorGroup"
+        android:layout_width="283dp"
+        android:layout_height="454dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/red_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Red"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/yellow_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Yellow"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/green_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Green"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/blue_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Blue"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/purple_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Purple"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/orange_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Orange"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/white_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="White"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/grey_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="colorChoice"
+            android:text="Grey"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/no_selection_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="No Color Selected"
+            android:textSize="25sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Choose a colour\nfor this position"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ok_button_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="OK"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
