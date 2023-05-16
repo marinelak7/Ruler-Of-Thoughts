@@ -1,6 +1,6 @@
 package com.example.masterminds;
 
-import android.graphics.Color;
+
 
 public class Pegs {
 

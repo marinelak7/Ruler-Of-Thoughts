@@ -9,41 +9,19 @@
     android:onClick="viewRules">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:scrollbars="horizontal|vertical"
-        android:text="Rules\n
-         1.The codemaker (game system)  will select a code automatically and the game starts\n\n
-         2.The codebreaker (player)  begins to guess what the hidden code is.\n\n
-         The player can pick four colored pegs and place them in the nearest “guess row”.\n\n
-          3.The player asks the game to give him feedback  Next to each “guess row” will appear white and red squares (Hints)\n\n
-          •	Each white peg means that one of the guessed pegs is correct, but is in the wrong position\n\n
-          •Each red peg means that one of the guessed pegs is correct, and it is in the right position\n\n
-          4.The codebreaker (player) continues with the next “guess row” until his tries ends or until he right the code. "
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
     <Button
         android:id="@+id/button2"
-        android:layout_width="98dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/bg"
         android:text="Skip"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -64,17 +42,47 @@
         app:layout_constraintGuide_begin="174dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="663dp" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="733dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="447dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal|vertical"
+        android:text="Rules\n
+         1.The codemaker (game system)  will select a code automatically and the game starts\n\n
+         2.The codebreaker (player)  begins to guess what the hidden code is.\n\n
+         The player can pick four colored pegs and place them in the nearest “guess row”.\n\n
+          3.The player asks the game to give him feedback  Next to each “guess row” will appear white and red squares (Hints)\n\n
+          •	Each white peg means that one of the guessed pegs is correct, but is in the wrong position\n\n
+          •Each red peg means that one of the guessed pegs is correct, and it is in the right position\n\n
+          4.The codebreaker (player) continues with the next “guess row” until his tries ends or until he right the code. "
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="409dp"
         android:layout_height="208dp"
+        android:background="@drawable/img_1"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="200dp">
 
@@ -29,59 +30,59 @@
             app:tint="#131313" />
 
         <ImageButton
-        android:id="@+id/position_32"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:contentDescription="Position 2"
-        android:onClick="colorChoiceSpinner"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toEndOf="@+id/position_31"
-        app:layout_constraintTop_toBottomOf="@+id/position_36"
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#131313" />
+            android:id="@+id/position_32"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_31"
+            app:layout_constraintTop_toBottomOf="@+id/position_36"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
 
-    <ImageButton
-        android:id="@+id/position_29"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:contentDescription="Position 3"
-        android:onClick="colorChoiceSpinner"
+        <ImageButton
+            android:id="@+id/position_29"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
 
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/position_33"
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_33"
 
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#131313" />
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
 
-    <ImageButton
-        android:id="@+id/position_30"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:contentDescription="Position 4"
-        android:onClick="colorChoiceSpinner"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        <ImageButton
+            android:id="@+id/position_30"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
 
-        app:layout_constraintStart_toEndOf="@+id/position_29"
-        app:layout_constraintTop_toBottomOf="@+id/position_34"
+            app:layout_constraintStart_toEndOf="@+id/position_29"
+            app:layout_constraintTop_toBottomOf="@+id/position_34"
 
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#131313" />
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Some positions are clear."
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="Some positions are clear."
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/position_23"
@@ -494,149 +495,143 @@
             app:tint="#131313" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/checkAnswer"
-        android:layout_width="74dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="24dp"
-        android:clickable="true"
-        android:contentDescription="Check Answer"
-        android:foregroundGravity="bottom"
-        android:onClick="checkAnswerMethod"
-        android:visibility="invisible"
-        app:backgroundTint="#1CD824"
-        app:fabSize="auto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.765"
-        app:layout_constraintStart_toStartOf="parent"
-        app:maxImageSize="40dp"
-        app:srcCompat="@android:drawable/checkbox_on_background" />
+            android:id="@+id/checkAnswer"
+            android:layout_width="74dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:foregroundGravity="bottom"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.765"
+            app:layout_constraintStart_toStartOf="parent"
+            app:maxImageSize="40dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
 
-    <ImageButton
-        android:id="@+id/position_33"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="80dp"
-        android:contentDescription="Peg Position 5"
-        android:onClick="colorChoiceSpinner"
-
-
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#1B1919" />
-
-    <ImageButton
-        android:id="@+id/position_36"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:contentDescription="Peg Position 8"
-        android:onClick="colorChoiceSpinner"
-        android:layout_marginStart="20dp"
+        <ImageButton
+            android:id="@+id/position_33"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
 
 
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
 
-        app:layout_constraintStart_toEndOf="@+id/position_35"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#1B1919" />
 
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#171616" />
-
-    <ImageButton
-        android:id="@+id/position_35"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:contentDescription="Peg Position 7"
-        android:onClick="colorChoiceSpinner"
-        android:layout_marginStart="20dp"
-
+        <ImageButton
+            android:id="@+id/position_36"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 8"
+            android:onClick="colorChoiceSpinner"
 
 
-        app:layout_constraintStart_toEndOf="@+id/position_34"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+            app:layout_constraintStart_toEndOf="@+id/position_35"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
 
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#171616" />
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#171616" />
 
-    <ImageButton
-        android:id="@+id/position_34"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:contentDescription="Peg Position 6"
-        android:onClick="colorChoiceSpinner"
-        android:layout_marginStart="20dp"
+        <ImageButton
+            android:id="@+id/position_35"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 7"
+            android:onClick="colorChoiceSpinner"
 
 
+            app:layout_constraintStart_toEndOf="@+id/position_34"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
 
-        app:layout_constraintStart_toEndOf="@+id/position_33"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#171616" />
 
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#1C1B1B" />
+        <ImageButton
+            android:id="@+id/position_34"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
 
-    <TextView
-        android:id="@+id/white_index_2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:textAlignment="center"
-        android:textColor="#2196F3"
-        android:textSize="24sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
 
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-        app:layout_constraintVertical_bias="0.601" />
+            app:layout_constraintStart_toEndOf="@+id/position_33"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#1C1B1B" />
+
+        <TextView
+            android:id="@+id/white_index_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+            app:layout_constraintVertical_bias="0.601" />
 
         <TextView
             android:id="@+id/red_index_2"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:textAlignment="center"
             android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
             android:textColor="#F62213"
             android:textSize="24sp"
-            android:layout_marginEnd="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/position_36"
-            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-             />
+            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns" />
 
         <TextView
-        android:id="@+id/white_index_1"
-        android:layout_width="56dp"
-        android:layout_height="39dp"
-        android:textAlignment="center"
-        android:textColor="#2196F3"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+            android:id="@+id/white_index_1"
+            android:layout_width="56dp"
+            android:layout_height="39dp"
+            android:textAlignment="center"
+            android:textColor="#FEFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.755" />
 
-    <TextView
-        android:id="@+id/red_index_1"
-        android:layout_width="50dp"
-        android:layout_height="39dp"
-        android:textAlignment="center"
-        android:textColor="#EC281A"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
-
+        <TextView
+            android:id="@+id/red_index_1"
+            android:layout_width="50dp"
+            android:layout_height="39dp"
+            android:textAlignment="center"
+            android:textColor="#EC281A"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.977"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.755" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
