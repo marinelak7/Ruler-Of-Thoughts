@@ -2,15 +2,12 @@ package com.example.masterminds;
 
 import android.app.Dialog;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,14 +30,14 @@ public class GameActivityWithSpinner extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        pos[0][0] = new Pegs(R.id.position1);
-        pos[0][1] = new Pegs(R.id.position2);
-        pos[0][2] = new Pegs(R.id.position3);
-        pos[0][3] = new Pegs(R.id.position4);
-        pos[1][0] = new Pegs(R.id.position5);
-        pos[1][1] = new Pegs(R.id.position6);
-        pos[1][2] = new Pegs(R.id.position7);
-        pos[1][3] = new Pegs(R.id.position8);
+        pos[0][0] = new Pegs(R.id.position_29);
+        pos[0][1] = new Pegs(R.id.position_30);
+        pos[0][2] = new Pegs(R.id.position_31);
+        pos[0][3] = new Pegs(R.id.position_32);
+        pos[1][0] = new Pegs(R.id.position_33);
+        pos[1][1] = new Pegs(R.id.position_34);
+        pos[1][2] = new Pegs(R.id.position_35);
+        pos[1][3] = new Pegs(R.id.position_36);
         unique_codes = new HashMap<>();
         hidden_code[0] = "Red";
         hidden_code[1] = "Blue";

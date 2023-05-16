@@ -1,68 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameActivityWithRadioGroup">
 
-    <ImageButton
-        android:id="@+id/position3"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:contentDescription="Position"
-        android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.629"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
-        app:srcCompat="@drawable/ic_launcher_background"
-        app:tint="#131313" />
 
-    <ImageButton
-        android:id="@+id/position4"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="208dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="200dp">
+
+
+        <ImageButton
+            android:id="@+id/position_31"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_30"
+            app:layout_constraintTop_toBottomOf="@+id/position_35"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+        android:id="@+id/position_32"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:contentDescription="Position 2"
         android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/position_31"
+        app:layout_constraintTop_toBottomOf="@+id/position_36"
         app:srcCompat="@drawable/ic_launcher_background"
         app:tint="#131313" />
 
     <ImageButton
-        android:id="@+id/position1"
+        android:id="@+id/position_29"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:contentDescription="Position 3"
         android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
+        app:layout_constraintTop_toBottomOf="@+id/position_33"
+
         app:srcCompat="@drawable/ic_launcher_background"
         app:tint="#131313" />
 
     <ImageButton
-        android:id="@+id/position2"
+        android:id="@+id/position_30"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:contentDescription="Position 4"
         android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+
+        app:layout_constraintStart_toEndOf="@+id/position_29"
+        app:layout_constraintTop_toBottomOf="@+id/position_34"
+
         app:srcCompat="@drawable/ic_launcher_background"
         app:tint="#131313" />
 
@@ -78,19 +83,417 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/numberOfTurns"
-        android:layout_width="82dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="48dp"
-        android:text="Text"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        <ImageButton
+            android:id="@+id/position_23"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_22"
+            app:layout_constraintTop_toBottomOf="@+id/position_27"
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_22"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
+
+            app:layout_constraintStart_toEndOf="@+id/position_21"
+            app:layout_constraintTop_toBottomOf="@+id/position_26"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_21"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_25"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_24"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_23"
+            app:layout_constraintTop_toBottomOf="@+id/position_28"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_28"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_27"
+            app:layout_constraintTop_toBottomOf="@+id/position_32"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_20"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_19"
+            app:layout_constraintTop_toBottomOf="@+id/position_24"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_17"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_21"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_19"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_18"
+            app:layout_constraintTop_toBottomOf="@+id/position_23"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_18"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
+
+            app:layout_constraintStart_toEndOf="@+id/position_17"
+            app:layout_constraintTop_toBottomOf="@+id/position_22"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_25"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_29"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_13"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_17"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_16"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_15"
+            app:layout_constraintTop_toBottomOf="@+id/position_20"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_15"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_14"
+            app:layout_constraintTop_toBottomOf="@+id/position_19"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_14"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
+
+            app:layout_constraintStart_toEndOf="@+id/position_13"
+            app:layout_constraintTop_toBottomOf="@+id/position_18"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_26"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
+
+            app:layout_constraintStart_toEndOf="@+id/position_25"
+            app:layout_constraintTop_toBottomOf="@+id/position_30"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_9"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_13"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_10"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
+
+            app:layout_constraintStart_toEndOf="@+id/position_9"
+            app:layout_constraintTop_toBottomOf="@+id/position_14"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_12"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_11"
+            app:layout_constraintTop_toBottomOf="@+id/position_16"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_11"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_10"
+            app:layout_constraintTop_toBottomOf="@+id/position_15"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_27"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_26"
+            app:layout_constraintTop_toBottomOf="@+id/position_31"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_8"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_7"
+            app:layout_constraintTop_toBottomOf="@+id/position_12"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_6"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
+
+            app:layout_constraintStart_toEndOf="@+id/position_5"
+            app:layout_constraintTop_toBottomOf="@+id/position_10"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_7"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_6"
+            app:layout_constraintTop_toBottomOf="@+id/position_11"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_5"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_9"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <TextView
+            android:id="@+id/numberOfTurns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <ImageButton
+            android:id="@+id/position_4"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 2"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_3"
+            app:layout_constraintTop_toBottomOf="@+id/position_8"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position 4"
+            android:onClick="colorChoiceSpinner"
+
+            app:layout_constraintStart_toEndOf="@+id/position_1"
+            app:layout_constraintTop_toBottomOf="@+id/position_6"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="Position 3"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position_5"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position_3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Position"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@+id/position_2"
+            app:layout_constraintTop_toBottomOf="@+id/position_7"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/checkAnswer"
         android:layout_width="74dp"
         android:layout_height="0dp"
@@ -110,94 +513,103 @@
         app:srcCompat="@android:drawable/checkbox_on_background" />
 
     <ImageButton
-        android:id="@+id/position5"
+        android:id="@+id/position_33"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="80dp"
         android:contentDescription="Peg Position 5"
         android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+
+
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+
         app:srcCompat="@drawable/ic_launcher_background"
         app:tint="#1B1919" />
 
     <ImageButton
-        android:id="@+id/position8"
+        android:id="@+id/position_36"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="Peg Position 8"
         android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605"
+        android:layout_marginStart="20dp"
+
+
+
+        app:layout_constraintStart_toEndOf="@+id/position_35"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+
         app:srcCompat="@drawable/ic_launcher_background"
         app:tint="#171616" />
 
     <ImageButton
-        android:id="@+id/position7"
+        android:id="@+id/position_35"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="Peg Position 7"
         android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.629"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605"
+        android:layout_marginStart="20dp"
+
+
+
+        app:layout_constraintStart_toEndOf="@+id/position_34"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+
         app:srcCompat="@drawable/ic_launcher_background"
         app:tint="#171616" />
 
     <ImageButton
-        android:id="@+id/position6"
+        android:id="@+id/position_34"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="Peg Position 6"
         android:onClick="colorChoiceSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605"
+        android:layout_marginStart="20dp"
+
+
+
+        app:layout_constraintStart_toEndOf="@+id/position_33"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+
         app:srcCompat="@drawable/ic_launcher_background"
         app:tint="#1C1B1B" />
 
     <TextView
         android:id="@+id/white_index_2"
-        android:layout_width="56dp"
-        android:layout_height="39dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:textAlignment="center"
         android:textColor="#2196F3"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
         app:layout_constraintVertical_bias="0.601" />
 
-    <TextView
-        android:id="@+id/red_index_2"
-        android:layout_width="50dp"
-        android:layout_height="39dp"
-        android:textAlignment="center"
-        android:textColor="#F62213"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.601" />
+        <TextView
+            android:id="@+id/red_index_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            android:textColor="#F62213"
+            android:textSize="24sp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/position_36"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+             />
 
-    <TextView
+        <TextView
         android:id="@+id/white_index_1"
         android:layout_width="56dp"
         android:layout_height="39dp"
@@ -226,4 +638,8 @@
         app:layout_constraintVertical_bias="0.755" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

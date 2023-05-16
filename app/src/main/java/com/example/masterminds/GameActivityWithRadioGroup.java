@@ -27,7 +27,7 @@ public class GameActivityWithRadioGroup extends AppCompatActivity {
         dialog.setContentView(R.layout.color_choice_radiogroup);
         RadioGroup colour = dialog.findViewById(R.id.colorGroup);
         Button ok = dialog.findViewById(R.id.ok_button_radiogroup);
-        ImageButton im = findViewById(R.id.position1);
+        ImageButton im = findViewById(R.id.position_29);
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
