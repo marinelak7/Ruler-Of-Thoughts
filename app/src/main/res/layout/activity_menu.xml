@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_2"
+    android:background="@drawable/background"
     tools:context=".Menu">
 
     <androidx.constraintlayout.widget.Guideline
@@ -67,29 +67,33 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#00007F"
-        android:backgroundTint="#152267"
+        android:backgroundTint="#00007F"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#1D1DC3"
-        android:backgroundTint="#233491"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00007F"
+        android:backgroundTint="#00007F"
         android:contentDescription="Quit Game"
-        android:foregroundTint="#182FAF"
-        android:onClick="viewRules"
 
+        android:foregroundTint="@color/white"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="viewRules"
         android:scaleType="fitCenter"
-        android:src="@drawable/question_mark2"
+        android:src="@drawable/gold_questionmark"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView2"

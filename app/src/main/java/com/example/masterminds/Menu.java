@@ -13,25 +13,24 @@ import java.util.Objects;
 
 public class Menu extends AppCompatActivity {
 
-    Toolbar toolbar;
+    //Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         // Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.dark_blue)));
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
+        //toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
     }
 
 
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
+    //private void setSupportActionBar(Toolbar toolbar) {
+    //}
 
 
 }
