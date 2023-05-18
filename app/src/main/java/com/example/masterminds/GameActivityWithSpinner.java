@@ -1,23 +1,43 @@
 package com.example.masterminds;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import androidx.core.content.ContextCompat;
 
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.HashMap;
 
+import nl.dionsegijn.konfetti.core.Angle;
+import nl.dionsegijn.konfetti.core.Party;
+import nl.dionsegijn.konfetti.core.PartyFactory;
+import nl.dionsegijn.konfetti.core.Position;
+import nl.dionsegijn.konfetti.core.Spread;
+import nl.dionsegijn.konfetti.core.emitter.Emitter;
+import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
+import nl.dionsegijn.konfetti.core.models.Shape;
+import nl.dionsegijn.konfetti.core.models.Size;
+import nl.dionsegijn.konfetti.xml.KonfettiView;
+
 public class GameActivityWithSpinner extends AppCompatActivity {
 
     FloatingActionButton actionButton;
+
+
+    private KonfettiView konfettiView = null;
+    private Shape.DrawableShape drawableShape = null;
     TextView tvt;
     Pegs [][] pos = new Pegs[2][4];
     String []hidden_code = new String[4] ;
@@ -209,7 +229,7 @@ public class GameActivityWithSpinner extends AppCompatActivity {
         return false;
     }
 
-    public void checkAnswerMethod(View view) {
+    public void checkAnswerMethod(View v) {
 
         int red_index = 0, white_index = 0;
 
@@ -331,22 +351,26 @@ public class GameActivityWithSpinner extends AppCompatActivity {
 */
         if (red_index == 4)
         {
-            Dialog dialog = new Dialog(this);
-            dialog.setContentView(R.layout.result_screen);
-
-            tvt = dialog.findViewById(R.id.print_result);
-            tvt.setText("YOU WIN");
-            Button ok = dialog.findViewById(R.id.ok_button_result);
 
 
-            ok.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
 
-            dialog.show();
+
+            Intent i = new Intent(this, Results.class);
+
+
+            startActivity(i);
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
 
