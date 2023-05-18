@@ -517,15 +517,15 @@
             android:id="@+id/position_33"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="30dp"
             android:contentDescription="Peg Position 5"
+
+
             android:onClick="colorChoiceSpinner"
 
-
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/white_index_2"
             app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#1B1919" />
 
