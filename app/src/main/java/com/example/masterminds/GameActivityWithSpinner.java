@@ -3,6 +3,7 @@ package com.example.masterminds;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.shapes.Shape;
 import android.os.Bundle;
 import android.graphics.drawable.Drawable;
 import android.view.View;
@@ -27,7 +28,7 @@ import nl.dionsegijn.konfetti.core.Position;
 import nl.dionsegijn.konfetti.core.Spread;
 import nl.dionsegijn.konfetti.core.emitter.Emitter;
 import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
-import nl.dionsegijn.konfetti.core.models.Shape;
+//import nl.dionsegijn.konfetti.core.models.Shape;
 import nl.dionsegijn.konfetti.core.models.Size;
 import nl.dionsegijn.konfetti.xml.KonfettiView;
 
@@ -37,7 +38,7 @@ public class GameActivityWithSpinner extends AppCompatActivity {
 
 
     private KonfettiView konfettiView = null;
-    private Shape.DrawableShape drawableShape = null;
+    //private Shape.DrawableShape drawableShape = null;
     TextView tvt;
     Pegs [][] pos = new Pegs[2][4];
     String []hidden_code = new String[4] ;
