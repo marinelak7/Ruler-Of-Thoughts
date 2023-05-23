@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="viewRules"
-    tools:context=".MainActivity">
+    android:background="#FFFFFF"
+    tools:context=".MainActivity"
+    android:onClick="viewRules">
 
 
     <Button
@@ -13,8 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg"
-        android:onClick="Skip"
         android:text="Skip"
+        android:onClick="Skip"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="normal"
@@ -39,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="174dp" />
+        app:layout_constraintGuide_begin="120dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -66,23 +67,26 @@
         </LinearLayout>
     </ScrollView>
 
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="733dp"
+        android:layout_height="146dp"
         android:scrollbars="horizontal|vertical"
         android:text="Rules\n
          1.The codemaker (game system)  will select a code automatically and the game starts\n\n
          2.The codebreaker (player)  begins to guess what the hidden code is.\n\n
          The player can pick four colored pegs and place them in the nearest “guess row”.\n\n
-          3.The player asks the game to give him feedback  Next to each “guess row” will appear white and red squares (Hints)\n\n
+         3.The player asks the game to give him feedback.\n\n
+          Next to each “guess row” will appear white and red squares (Hints)\n\n
           •	Each white peg means that one of the guessed pegs is correct, but is in the wrong position\n\n
           •Each red peg means that one of the guessed pegs is correct, and it is in the right position\n\n
-          4.The codebreaker (player) continues with the next “guess row” until his tries ends or until he right the code. "
+         4.The codebreaker (player) continues with the next “guess row” until his tries ends or until he right the code. "
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
