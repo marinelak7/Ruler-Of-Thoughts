@@ -39,5 +39,12 @@ public class ChooseDifficultyMenuVer1 extends AppCompatActivity {
         Intent i = new Intent(this, GameActivityWithSpinner.class);
         startActivity(i);
     }
+
+    public void viewRules(View view)
+    {
+        Intent i = new Intent(this, rules.class);
+        startActivity(i);
+    }
+
 }
 

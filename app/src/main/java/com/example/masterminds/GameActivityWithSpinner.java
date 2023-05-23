@@ -37,99 +37,121 @@ public class GameActivityWithSpinner extends AppCompatActivity {
     String []users_answer = new String[4];
     int [] correct_color_wrong_position = new int[9];
     int [] correct_color_correct_position = new int[9];
-
+    int turns;
     int [] checkAnswers = new int[9];
     HashMap<String, Integer> unique_answers;
     HashMap<String, Integer> unique_codes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
 
-
-        if (Pegs.getDifficulty() == 0)
-        {
-            setContentView(R.layout.activity_game);
-        }
-        else if (Pegs.getDifficulty() == 1)
-        {
-            setContentView(R.layout.activity_game);
-        }
-        else
-        {
-            setContentView(R.layout.hard_difficulty);
-        }
-
-        pos[0][0] = new Pegs(R.id.position__1); pos[0][1] = new Pegs(R.id.position__2);
-        pos[0][2] = new Pegs(R.id.position__3); pos[0][3] = new Pegs(R.id.position__4);
-
-        pos[1][0] = new Pegs(R.id.position__5); pos[1][1] = new Pegs(R.id.position__6);
-        pos[1][2] = new Pegs(R.id.position__7); pos[1][3] = new Pegs(R.id.position__8);
-
-        pos[2][0] = new Pegs(R.id.position__9); pos[2][1] = new Pegs(R.id.position__10);
-        pos[2][2] = new Pegs(R.id.position__11); pos[2][3] = new Pegs(R.id.position__12);
-
-        pos[3][0] = new Pegs(R.id.position__13); pos[3][1] = new Pegs(R.id.position__14);
-        pos[3][2] = new Pegs(R.id.position__15); pos[3][3] = new Pegs(R.id.position__16);
-
-        pos[4][0] = new Pegs(R.id.position__17); pos[4][1] = new Pegs(R.id.position__18);
-        pos[4][2] = new Pegs(R.id.position__19); pos[4][3] = new Pegs(R.id.position__20);
-
-        pos[5][0] = new Pegs(R.id.position__21); pos[5][1] = new Pegs(R.id.position__22);
-        pos[5][2] = new Pegs(R.id.position__23); pos[5][3] = new Pegs(R.id.position__24);
-
-        pos[6][0] = new Pegs(R.id.position__25); pos[6][1] = new Pegs(R.id.position__26);
-        pos[6][2] = new Pegs(R.id.position__27); pos[6][3] = new Pegs(R.id.position__28);
-
-        pos[7][0] = new Pegs(R.id.position__29); pos[7][1] = new Pegs(R.id.position__30);
-        pos[7][2] = new Pegs(R.id.position__31); pos[7][3] = new Pegs(R.id.position__32);
-
-        pos[8][0] = new Pegs(R.id.position__33); pos[8][1] = new Pegs(R.id.position__34);
-        pos[8][2] = new Pegs(R.id.position__35); pos[8][3] = new Pegs(R.id.position__36);
-
-
-        createCode();
-
-
-        unique_codes = new HashMap<>();
-
-        unique_answers = new HashMap<>();
-
-
-        correct_color_correct_position[0] = R.id.red_index_1; correct_color_correct_position[1] = R.id.red_index_2;
-        correct_color_correct_position[2] = R.id.red_index_3; correct_color_correct_position[3] = R.id.red_index_4;
-        correct_color_correct_position[4] = R.id.red_index_5; correct_color_correct_position[5] = R.id.red_index_6;
-        correct_color_correct_position[6] = R.id.red_index_7; correct_color_correct_position[7] = R.id.red_index_8;
-        correct_color_correct_position[8] = R.id.red_index_9;
+        turns = 9; // Player can try that many times.
 
 
 
-        correct_color_wrong_position[0] = R.id.white_index_1; correct_color_wrong_position[1] = R.id.white_index_2;
-        correct_color_wrong_position[2] = R.id.white_index_3; correct_color_wrong_position[3] = R.id.white_index_4;
-        correct_color_wrong_position[4] = R.id.white_index_5; correct_color_wrong_position[5] = R.id.white_index_6;
-        correct_color_wrong_position[6] = R.id.white_index_7; correct_color_wrong_position[7] = R.id.white_index_8;
-        correct_color_wrong_position[8] = R.id.white_index_9;
+        ImageButton bt;
 
-        checkAnswers[0] = R.id.checkAnswer_1; checkAnswers[1] = R.id.checkAnswer_2;
-        checkAnswers[2] = R.id.checkAnswer_3; checkAnswers[3] = R.id.checkAnswer_4;
-        checkAnswers[4] = R.id.checkAnswer_5; checkAnswers[5] = R.id.checkAnswer_6;
-        checkAnswers[6] = R.id.checkAnswer_7; checkAnswers[7] = R.id.checkAnswer_8;
-        checkAnswers[8] = R.id.checkAnswer_9;
+            pos[0][0] = new Pegs(R.id.position__1);
+            pos[0][1] = new Pegs(R.id.position__2);
+            pos[0][2] = new Pegs(R.id.position__3);
+            pos[0][3] = new Pegs(R.id.position__4);
 
-        for (int i = 0; i < 4; i++)
-        {
-            if (unique_codes.containsKey(hidden_code[i]))
-            {
-                unique_codes.put(hidden_code[i], unique_codes.get(hidden_code[i]) + 1);
-                continue;
+            pos[1][0] = new Pegs(R.id.position__5);
+            pos[1][1] = new Pegs(R.id.position__6);
+            pos[1][2] = new Pegs(R.id.position__7);
+            pos[1][3] = new Pegs(R.id.position__8);
+
+            pos[2][0] = new Pegs(R.id.position__9);
+            pos[2][1] = new Pegs(R.id.position__10);
+            pos[2][2] = new Pegs(R.id.position__11);
+            pos[2][3] = new Pegs(R.id.position__12);
+
+            pos[3][0] = new Pegs(R.id.position__13);
+            pos[3][1] = new Pegs(R.id.position__14);
+            pos[3][2] = new Pegs(R.id.position__15);
+            pos[3][3] = new Pegs(R.id.position__16);
+
+            pos[4][0] = new Pegs(R.id.position__17);
+            pos[4][1] = new Pegs(R.id.position__18);
+            pos[4][2] = new Pegs(R.id.position__19);
+            pos[4][3] = new Pegs(R.id.position__20);
+
+            pos[5][0] = new Pegs(R.id.position__21);
+            pos[5][1] = new Pegs(R.id.position__22);
+            pos[5][2] = new Pegs(R.id.position__23);
+            pos[5][3] = new Pegs(R.id.position__24);
+
+            pos[6][0] = new Pegs(R.id.position__25);
+            pos[6][1] = new Pegs(R.id.position__26);
+            pos[6][2] = new Pegs(R.id.position__27);
+            pos[6][3] = new Pegs(R.id.position__28);
+
+            pos[7][0] = new Pegs(R.id.position__29);
+            pos[7][1] = new Pegs(R.id.position__30);
+            pos[7][2] = new Pegs(R.id.position__31);
+            pos[7][3] = new Pegs(R.id.position__32);
+
+            pos[8][0] = new Pegs(R.id.position__33);
+            pos[8][1] = new Pegs(R.id.position__34);
+            pos[8][2] = new Pegs(R.id.position__35);
+            pos[8][3] = new Pegs(R.id.position__36);
+
+
+            createCode();
+
+
+            unique_codes = new HashMap<>();
+
+            unique_answers = new HashMap<>();
+
+
+            correct_color_correct_position[0] = R.id.red_index_1;
+            correct_color_correct_position[1] = R.id.red_index_2;
+            correct_color_correct_position[2] = R.id.red_index_3;
+            correct_color_correct_position[3] = R.id.red_index_4;
+            correct_color_correct_position[4] = R.id.red_index_5;
+            correct_color_correct_position[5] = R.id.red_index_6;
+            correct_color_correct_position[6] = R.id.red_index_7;
+            correct_color_correct_position[7] = R.id.red_index_8;
+            correct_color_correct_position[8] = R.id.red_index_9;
+
+
+            correct_color_wrong_position[0] = R.id.white_index_1;
+            correct_color_wrong_position[1] = R.id.white_index_2;
+            correct_color_wrong_position[2] = R.id.white_index_3;
+            correct_color_wrong_position[3] = R.id.white_index_4;
+            correct_color_wrong_position[4] = R.id.white_index_5;
+            correct_color_wrong_position[5] = R.id.white_index_6;
+            correct_color_wrong_position[6] = R.id.white_index_7;
+            correct_color_wrong_position[7] = R.id.white_index_8;
+            correct_color_wrong_position[8] = R.id.white_index_9;
+
+            checkAnswers[0] = R.id.checkAnswer_1;
+            checkAnswers[1] = R.id.checkAnswer_2;
+            checkAnswers[2] = R.id.checkAnswer_3;
+            checkAnswers[3] = R.id.checkAnswer_4;
+            checkAnswers[4] = R.id.checkAnswer_5;
+            checkAnswers[5] = R.id.checkAnswer_6;
+            checkAnswers[6] = R.id.checkAnswer_7;
+            checkAnswers[7] = R.id.checkAnswer_8;
+            checkAnswers[8] = R.id.checkAnswer_9;
+
+            for (int i = 0; i < 4; i++) {
+                if (unique_codes.containsKey(hidden_code[i])) {
+                    unique_codes.put(hidden_code[i], unique_codes.get(hidden_code[i]) + 1);
+                    continue;
+                }
+                unique_codes.put(hidden_code[i], 1);
             }
-            unique_codes.put(hidden_code[i], 1);
-        }
-        //Toast toast = Toast.makeText(getApplicationContext(), "HELLO", Toast.LENGTH_SHORT);
-        //toast.show();
+            //Toast toast = Toast.makeText(getApplicationContext(), "HELLO", Toast.LENGTH_SHORT);
+            //toast.show();
 
-    }
+
+        }
+
     int current_turn = 1;
-    int turns = 9;
+
     String str = "";
     Pegs temp = null;
 
@@ -175,46 +197,55 @@ public class GameActivityWithSpinner extends AppCompatActivity {
                     {
                         im.setColorFilter(Color.RED);
                         temp.setColor("Red");
+                        temp.setIntColor(Color.RED);
                     }
                     else if (str.equalsIgnoreCase("-Blue"))
                     {
                         im.setColorFilter(Color.BLUE);
                         temp.setColor("Blue");
+                        temp.setIntColor(Color.BLUE);
                     }
                     else if (str.equalsIgnoreCase("-Yellow"))
                     {
                         im.setColorFilter(Color.YELLOW);
                         temp.setColor("Yellow");
+                        temp.setIntColor(Color.YELLOW);
                     }
                     else if (str.equalsIgnoreCase("-Green"))
                     {
                         im.setColorFilter(Color.GREEN);
                         temp.setColor("Green");
+                        temp.setIntColor(Color.GREEN);
                     }
                     else if (str.equalsIgnoreCase("-Gray"))
                     {
                         im.setColorFilter(Color.GRAY);
                         temp.setColor("Gray");
+                        temp.setIntColor(Color.GRAY);
                     }
                     else if (str.equalsIgnoreCase("-White"))
                     {
                         im.setColorFilter(Color.WHITE);
                         temp.setColor("White");
+                        temp.setIntColor(Color.WHITE);
                     }
                     else if (str.equalsIgnoreCase("-Magenta"))
                     {
                         im.setColorFilter(Color.MAGENTA);
                         temp.setColor("Magenta");
+                        temp.setIntColor(Color.MAGENTA);
                     }
                     else if (str.equalsIgnoreCase("-Cyan"))
                     {
                         im.setColorFilter(Color.CYAN);
                         temp.setColor("Cyan");
+                        temp.setIntColor(Color.CYAN);
                     }
                     else
                     {
                         im.setColorFilter(Color.BLACK);
                         temp.setColor("Black");
+                        temp.setIntColor(Color.BLACK);
                     }
 
                     checkAnswer();
@@ -473,4 +504,41 @@ public class GameActivityWithSpinner extends AppCompatActivity {
         Toast.makeText(this, hidden_code[0] + " " + hidden_code[1] + " " +
                 hidden_code[2] + " " + hidden_code[3], Toast.LENGTH_LONG).show();
     }
+
+
+
+  /*  @Override
+    protected void onSaveInstanceState(Bundle outState)
+    {
+
+
+        for (int i = 0; i < turns; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                outState.putCharSequence("position_" + 4*i + j + 1 + "_color", pos[i][j].getColor());
+                outState.putInt("position__" + 4*i + j + 1 + "_intColor", pos[i][j].getIntColor());
+            }
+        }
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle outState)
+    {
+        super.onRestoreInstanceState(outState);
+        ImageButton bt;
+        if (outState != null)
+        {
+            for (int i = 0; i < turns; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    bt = findViewById(pos[i][j].getId());
+                    bt.setColorFilter(outState.getInt("position__" + 4*i + j + 1 + "_intColor"));
+                }
+            }
+        }
+
+    }*/
 }
