@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
+
 
     Button quitbtn;
 
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
 
         quitbtn = findViewById(R.id.quitbtn);
         quitbtn.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
     public void newGame(View view)
