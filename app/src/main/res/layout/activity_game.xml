@@ -8,631 +8,1145 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="208dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/img_1"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="200dp">
 
 
         <ImageButton
-            android:id="@+id/position_31"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="28dp"
-            android:contentDescription="Position"
+            android:id="@+id/position__7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
             android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_30"
-            app:layout_constraintTop_toBottomOf="@+id/position_35"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_2"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_2"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_2"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_2"
 
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#131313" />
 
         <ImageButton
-            android:id="@+id/position_32"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
+            android:id="@+id/position__15"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
+            android:contentDescription="Peg Position 6"
             android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_31"
-            app:layout_constraintTop_toBottomOf="@+id/position_36"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_4"
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#131313" />
 
         <ImageButton
-            android:id="@+id/position_29"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
+            android:id="@+id/position__14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
+            android:contentDescription="Peg Position 6"
             android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_33"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_4"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_4"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_4"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_3"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_5"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__17"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_5"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__19"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_5"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__18"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_5"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_3"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_6"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__24"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_6"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_6"
 
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#131313" />
 
         <ImageButton
-            android:id="@+id/position_30"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
+            android:id="@+id/position__22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
+            android:contentDescription="Peg Position 6"
             android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_6"
 
-            app:layout_constraintStart_toEndOf="@+id/position_29"
-            app:layout_constraintTop_toBottomOf="@+id/position_34"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_3"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__25"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_7"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__26"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_7"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__28"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_7"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__27"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_7"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_3"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_8"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_8"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_8"
+
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__29"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 5"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_8"
 
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#131313" />
 
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:text="Some positions are clear."
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/position_23"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_22"
-            app:layout_constraintTop_toBottomOf="@+id/position_27"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_22"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
-            android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/position_21"
-            app:layout_constraintTop_toBottomOf="@+id/position_26"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_21"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_25"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_24"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_23"
-            app:layout_constraintTop_toBottomOf="@+id/position_28"
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_28"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_27"
-            app:layout_constraintTop_toBottomOf="@+id/position_32"
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_20"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_19"
-            app:layout_constraintTop_toBottomOf="@+id/position_24"
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_17"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_21"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_19"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_18"
-            app:layout_constraintTop_toBottomOf="@+id/position_23"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_18"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
-            android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/position_17"
-            app:layout_constraintTop_toBottomOf="@+id/position_22"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_25"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_29"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_13"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_17"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_16"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_15"
-            app:layout_constraintTop_toBottomOf="@+id/position_20"
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_15"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_14"
-            app:layout_constraintTop_toBottomOf="@+id/position_19"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_14"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
-            android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/position_13"
-            app:layout_constraintTop_toBottomOf="@+id/position_18"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_26"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
-            android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/position_25"
-            app:layout_constraintTop_toBottomOf="@+id/position_30"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_9"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_13"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_10"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
-            android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/position_9"
-            app:layout_constraintTop_toBottomOf="@+id/position_14"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_12"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_11"
-            app:layout_constraintTop_toBottomOf="@+id/position_16"
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_11"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_10"
-            app:layout_constraintTop_toBottomOf="@+id/position_15"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_27"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_26"
-            app:layout_constraintTop_toBottomOf="@+id/position_31"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_8"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_7"
-            app:layout_constraintTop_toBottomOf="@+id/position_12"
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_6"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
-            android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/position_5"
-            app:layout_constraintTop_toBottomOf="@+id/position_10"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_7"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_6"
-            app:layout_constraintTop_toBottomOf="@+id/position_11"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_5"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_9"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <TextView
-            android:id="@+id/numberOfTurns"
+            android:id="@+id/turn_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Text"
+            android:text="Turn 1"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/position_4"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
+        <TextView
+            android:id="@+id/turn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:contentDescription="Position 2"
-            android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_3"
-            app:layout_constraintTop_toBottomOf="@+id/position_8"
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_2"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Position 4"
-            android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/position_1"
-            app:layout_constraintTop_toBottomOf="@+id/position_6"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#131313" />
-
-        <ImageButton
-            android:id="@+id/position_1"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="Position 3"
-            android:onClick="colorChoiceSpinner"
+            android:text="Turn 2"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/position_5"
+            app:layout_constraintTop_toBottomOf="@+id/position__2" />
+
+        <TextView
+            android:id="@+id/turn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Turn 3"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position__6" />
+
+        <TextView
+            android:id="@+id/turn_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Turn 4"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position__10" />
+
+        <TextView
+            android:id="@+id/turn_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Turn 5"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position__14" />
+
+        <TextView
+            android:id="@+id/turn_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Turn 6"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position__18" />
+
+        <TextView
+            android:id="@+id/turn_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Turn 7"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position__22" />
+
+        <TextView
+            android:id="@+id/turn_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Turn 8"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position__26" />
+
+        <TextView
+            android:id="@+id/turn_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Turn 9"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position__30" />
+
+        <ImageButton
+            android:id="@+id/position__36"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_9"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__34"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_9"
 
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#131313" />
 
         <ImageButton
-            android:id="@+id/position_3"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
+            android:id="@+id/position__33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="30dp"
-            android:contentDescription="Position"
+            android:contentDescription="Peg Position 5"
             android:onClick="colorChoiceSpinner"
-            app:layout_constraintStart_toEndOf="@+id/position_2"
-            app:layout_constraintTop_toBottomOf="@+id/position_7"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_9"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#131313" />
+
+        <ImageButton
+            android:id="@+id/position__35"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_9"
 
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#131313" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/checkAnswer"
-            android:layout_width="74dp"
+            android:id="@+id/checkAnswer_1"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
             android:clickable="true"
             android:contentDescription="Check Answer"
-            android:foregroundGravity="bottom"
-            android:visibility="invisible"
+            android:foregroundGravity="center"
             android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
             app:backgroundTint="#1CD824"
             app:fabSize="auto"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.765"
-            app:layout_constraintStart_toStartOf="parent"
-            app:maxImageSize="40dp"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_1"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_2"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_3"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_4"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_5"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_6"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_7"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_8"
+            app:maxImageSize="38dp"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkAnswer_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:contentDescription="Check Answer"
+            android:onClick="checkAnswerMethod"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:backgroundTint="#1CD824"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_9"
+            app:maxImageSize="38dp"
             app:srcCompat="@android:drawable/checkbox_on_background" />
 
         <ImageButton
-            android:id="@+id/position_33"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="24dp"
+            android:id="@+id/position__1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="30dp"
             android:contentDescription="Peg Position 5"
-
-
             android:onClick="colorChoiceSpinner"
-
-            app:layout_constraintStart_toEndOf="@+id/white_index_2"
-            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
+            app:layout_constraintStart_toEndOf="@id/first_guideline"
+            app:layout_constraintEnd_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_1"
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#1B1919" />
 
         <ImageButton
-            android:id="@+id/position_36"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Peg Position 8"
-            android:onClick="colorChoiceSpinner"
-
-
-            app:layout_constraintStart_toEndOf="@+id/position_35"
-            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#171616" />
-
-        <ImageButton
-            android:id="@+id/position_35"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:contentDescription="Peg Position 7"
-            android:onClick="colorChoiceSpinner"
-
-
-            app:layout_constraintStart_toEndOf="@+id/position_34"
-            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-
-            app:srcCompat="@drawable/ic_launcher_background"
-            app:tint="#171616" />
-
-        <ImageButton
-            android:id="@+id/position_34"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="20dp"
+            android:id="@+id/position__4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="30dp"
             android:contentDescription="Peg Position 6"
             android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/seventh_guideline"
+            app:layout_constraintEnd_toStartOf="@id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_1"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#171616" />
 
+        <ImageButton
+            android:id="@+id/position__3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/fifth_guideline"
+            app:layout_constraintEnd_toStartOf="@id/sixth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_1"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:tint="#171616" />
 
-            app:layout_constraintStart_toEndOf="@+id/position_33"
-            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-
+        <ImageButton
+            android:id="@+id/position__2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="30dp"
+            android:contentDescription="Peg Position 6"
+            android:onClick="colorChoiceSpinner"
+            app:layout_constraintStart_toEndOf="@id/third_guideline"
+            app:layout_constraintEnd_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_1"
             app:srcCompat="@drawable/ic_launcher_background"
             app:tint="#1C1B1B" />
 
         <TextView
             android:id="@+id/white_index_2"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
             android:textAlignment="center"
             android:textColor="#2196F3"
             android:textSize="24sp"
-
-            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns"
-            app:layout_constraintVertical_bias="0.601" />
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_2" />
 
-        <TextView
-            android:id="@+id/red_index_2"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="10dp"
-            android:textAlignment="center"
-            android:textColor="#F62213"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/position_36"
-            app:layout_constraintTop_toBottomOf="@+id/numberOfTurns" />
 
         <TextView
             android:id="@+id/white_index_1"
-            android:layout_width="56dp"
-            android:layout_height="39dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
             android:textAlignment="center"
-            android:textColor="#FEFFFF"
+            android:textColor="#2196F3"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.755" />
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_1" />
+
+        <TextView
+            android:id="@+id/white_index_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_3" />
+
+        <TextView
+            android:id="@+id/white_index_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_4" />
+
+        <TextView
+            android:id="@+id/white_index_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_5" />
+
+        <TextView
+            android:id="@+id/white_index_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_6" />
+
+        <TextView
+            android:id="@+id/white_index_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_7" />
+
+        <TextView
+            android:id="@+id/white_index_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_8" />
+
+        <TextView
+            android:id="@+id/white_index_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:textColor="#2196F3"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_9" />
 
         <TextView
             android:id="@+id/red_index_1"
-            android:layout_width="50dp"
-            android:layout_height="39dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
             android:textAlignment="center"
-            android:textColor="#EC281A"
+            android:textColor="#f30003"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.977"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.755" />
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_1"/>
 
+        <TextView
+            android:id="@+id/red_index_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_2" />
+
+        <TextView
+            android:id="@+id/red_index_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_3" />
+
+        <TextView
+            android:id="@+id/red_index_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_4" />
+
+        <TextView
+            android:id="@+id/red_index_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_5" />
+
+        <TextView
+            android:id="@+id/red_index_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_6" />
+
+        <TextView
+            android:id="@+id/red_index_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_7" />
+
+        <TextView
+            android:id="@+id/red_index_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_8" />
+
+        <TextView
+            android:id="@+id/red_index_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:textColor="#f30003"
+            android:textSize="24sp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eigth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_9" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="showAnswer"
+            android:text="SHOW\nANSWER"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/first_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.17" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/second_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/third_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fourth_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.48" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fifth_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/sixth_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/seventh_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/eigth_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.84" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

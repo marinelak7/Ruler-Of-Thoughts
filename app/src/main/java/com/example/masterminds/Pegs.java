@@ -41,7 +41,7 @@ public class Pegs {
     {
         difficulty = _difficulty;
     }
-    public int getDifficulty()
+    static public int getDifficulty()
     {
         return difficulty;
     }

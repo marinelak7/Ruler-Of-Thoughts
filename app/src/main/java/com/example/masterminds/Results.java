@@ -3,8 +3,11 @@ package com.example.masterminds;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +28,7 @@ public class Results extends AppCompatActivity {
 
     private KonfettiView konfettiView = null;
     private Shape.DrawableShape drawableShape = null;
-
+    Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +37,16 @@ public class Results extends AppCompatActivity {
 
         //final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         //drawableShape = new Shape.DrawableShape(drawable, true);
+        Button ok = findViewById(R.id.ok_button_result);
+        i = new Intent(this, ChooseDifficultyMenuVer1.class);
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
 
-
+                startActivity(i);
+            }
+        });
 
         final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         drawableShape = new Shape.DrawableShape(drawable, true);
