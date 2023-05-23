@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+
     public void viewStatistics(View view) {
 
         Intent i = new Intent(this, Statistics.class);
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, rules.class);
         startActivity(i);
     }
+
 
 
 
