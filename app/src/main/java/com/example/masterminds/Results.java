@@ -8,19 +8,22 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import nl.dionsegijn.konfetti.core.Angle;
-import nl.dionsegijn.konfetti.core.Party;
 import nl.dionsegijn.konfetti.core.PartyFactory;
 import nl.dionsegijn.konfetti.core.Position;
 import nl.dionsegijn.konfetti.core.Spread;
 import nl.dionsegijn.konfetti.core.emitter.Emitter;
 import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
 import nl.dionsegijn.konfetti.core.models.Shape;
-import nl.dionsegijn.konfetti.core.models.Size;
 import nl.dionsegijn.konfetti.xml.KonfettiView;
 
 public class Results extends AppCompatActivity {
@@ -28,25 +31,33 @@ public class Results extends AppCompatActivity {
 
     private KonfettiView konfettiView = null;
     private Shape.DrawableShape drawableShape = null;
+
+
+    EditText playerName;
     Intent i;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_screen);
 
+        playerName = findViewById(R.id.playersName);
+
 
         //final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         //drawableShape = new Shape.DrawableShape(drawable, true);
-        Button ok = findViewById(R.id.ok_button_result);
+        Button ok = findViewById(R.id.submit_button);
         i = new Intent(this, ChooseDifficultyMenuVer1.class);
-        ok.setOnClickListener(new View.OnClickListener() {
+       /* ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
                 startActivity(i);
             }
-        });
+        });*/
 
         final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         drawableShape = new Shape.DrawableShape(drawable, true);
@@ -130,4 +141,64 @@ public class Results extends AppCompatActivity {
                         .build()
         );
     }
+
+    public void newEffort(View view)
+    {
+        MyDBHandler dbHandler = new MyDBHandler(Results.this);
+        String playersName = playerName.getText().toString();
+
+        if (!playersName.equalsIgnoreCase(""))
+        {
+          //  Effort found = dbHandler.findEffort(playersName);
+            //if (found == null)
+            //{
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            Date date = new Date();
+            String dt = formatter.format(date);
+
+            Effort effort = new Effort(playersName, dt,"WIN");
+            dbHandler.addEffort(effort.getPlayersName(), effort.getDate(), effort.getResult());
+            playerName.setText("");
+            //}
+
+            Intent i = new Intent(this, MainActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+        }
+
+
+    }
+
+
+
+    public void removeEffort (View view)
+    {
+        MyDBHandler dbHandler = new MyDBHandler(Results.this);
+        boolean result = dbHandler.deleteEffort(playerName.getText().toString());
+        if (result)
+        {
+            Toast.makeText(this, "Deleted", Toast.LENGTH_LONG).show();
+            playerName.setText("");
+
+        }
+        else{
+            Toast.makeText(this, "Not found", Toast.LENGTH_LONG).show();
+            playerName.setText("");
+        }
+    }
+    private ArrayList<Effort> effortArrayList;
+  /*  public void showEffort(View view)
+    {
+
+        effortArrayList = new ArrayList<>();
+
+        MyDBHandler dbHandler = new MyDBHandler(Results.this);
+
+        effortArrayList = dbHandler.readEfforts();
+
+
+        Toast.makeText(this, effortArrayList.get(0).getPlayersName() + " "
+                 + effortArrayList.get(0).getResult(), Toast.LENGTH_LONG).show();
+
+    }*/
 }

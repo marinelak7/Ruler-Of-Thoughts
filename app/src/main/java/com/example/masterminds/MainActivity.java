@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void newGame(View view)
     {
-        Intent i = new Intent(MainActivity.this, ChooseDifficultyMenuVer1.class);
+        Intent i = new Intent(MainActivity.this, GameActivityWithSpinner.class);
         startActivity(i);
     }
 
 
     public void viewStatistics(View view) {
 
-        Intent i = new Intent(this, Statistics.class);
+        Intent i = new Intent(MainActivity.this, Statistics.class);
         startActivity(i);
     }
 

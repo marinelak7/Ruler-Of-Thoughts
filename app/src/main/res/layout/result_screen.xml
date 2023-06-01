@@ -6,10 +6,23 @@
     android:layout_height="match_parent"
     android:background="@drawable/img_1">
 
-    <TextView
-        android:id="@+id/print_result"
+    <Button
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SHOW"
+        android:background="@drawable/bg"
+        android:textColor="@color/white"
+        android:onClick="showEffort"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit_button" />
+
+    <TextView
+        android:id="@+id/print_result"
+        android:layout_width="239dp"
+        android:layout_height="158dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
@@ -26,18 +39,19 @@
 
 
     <Button
-        android:id="@+id/ok_button_result"
+        android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+
+        android:onClick="newEffort"
+        android:text="Submit"
         android:background="@drawable/bg"
-        android:text="OK"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/print_result" />
-
+        app:layout_constraintTop_toBottomOf="@+id/playersName" />
 
     <nl.dionsegijn.konfetti.xml.KonfettiView
         android:id="@+id/konfettiView2"
@@ -46,4 +60,30 @@
         android:contentDescription="Message."
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/playersName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter a name"
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/print_result" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg"
+        android:onClick="removeEffort"
+        android:text="DELETE"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

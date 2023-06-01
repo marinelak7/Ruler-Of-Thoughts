@@ -465,6 +465,7 @@ public class GameActivityWithSpinner extends AppCompatActivity {
 
             Button ok = dialog.findViewById(R.id.ok_button_loss);
             Intent i = new Intent(this, ChooseDifficultyMenuVer1.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             ok.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

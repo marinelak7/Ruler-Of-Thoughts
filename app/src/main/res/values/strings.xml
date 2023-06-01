@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MasterMinds</string>
+    <string name="app_name">Ruler of Thoughts</string>
     <string-array name="colors">
         <item>-No Selection</item>
         <item>-Red</item>
@@ -10,5 +10,15 @@
         <item>-Gray</item>
         <item>-White</item>
         <item>-Magenta</item>
+    </string-array>
+
+    <string-array name="sort_type">
+        <item>-Sort By</item>
+        <item>-Names A-Z</item>
+        <item>-Names Z-A</item>
+        <item>-Most points</item>
+        <item>-Most Recent Tries</item>
+        <item>-Newest</item>
+        <item>-Oldest</item>
     </string-array>
 </resources>
