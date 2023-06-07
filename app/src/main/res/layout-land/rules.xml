@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     tools:context=".MainActivity"
-    android:onClick="viewRules">
+    android:onClick="viewRules"
+    android:background="@drawable/background"
+    >
 
 
     <Button
@@ -70,8 +71,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="733dp"
-        android:layout_height="146dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scrollbars="horizontal|vertical"
         android:text="Rules\n
          1.The codemaker (game system)  will select a code automatically and the game starts\n\n
@@ -83,6 +84,7 @@
           •Each red peg means that one of the guessed pegs is correct, and it is in the right position\n\n
          4.The codebreaker (player) continues with the next “guess row” until his tries ends or until he right the code. "
         android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.86"

@@ -1,10 +1,12 @@
 package com.example.masterminds;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -53,11 +55,33 @@ public class Statistics extends AppCompatActivity {
 
     public void delete(View view)
     {
-        dbHandler = new MyDBHandler(Statistics.this);
-        dbHandler.deleteAll();
-        Intent i = new Intent(this, Statistics.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
+
+
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_delete_tries);
+
+        Button button1 = dialog.findViewById(R.id.yes_delete);
+        Button button2 = dialog.findViewById(R.id.no_delete);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbHandler = new MyDBHandler(Statistics.this);
+                dbHandler.deleteAll();
+                Intent i = new Intent(Statistics.this, Statistics.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
 
     }
 

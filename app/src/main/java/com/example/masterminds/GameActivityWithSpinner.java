@@ -27,10 +27,6 @@ import nl.dionsegijn.konfetti.xml.KonfettiView;
 
 public class GameActivityWithSpinner extends AppCompatActivity {
 
-
-
-
-
     TextView tvt;
     Pegs [][] pos = new Pegs[9][4];
     String []hidden_code = new String[4] ;
@@ -464,7 +460,7 @@ public class GameActivityWithSpinner extends AppCompatActivity {
             dialog.setContentView(R.layout.results_loss);
 
             Button ok = dialog.findViewById(R.id.ok_button_loss);
-            Intent i = new Intent(this, ChooseDifficultyMenuVer1.class);
+            Intent i = new Intent(this, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             ok.setOnClickListener(new View.OnClickListener() {
                 @Override

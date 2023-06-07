@@ -49,7 +49,7 @@ public class Results extends AppCompatActivity {
         //final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         //drawableShape = new Shape.DrawableShape(drawable, true);
         Button ok = findViewById(R.id.submit_button);
-        i = new Intent(this, ChooseDifficultyMenuVer1.class);
+        i = new Intent(this, MainActivity.class);
        /* ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
