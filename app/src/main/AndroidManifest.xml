@@ -16,9 +16,6 @@
             android:name=".Results"
             android:exported="false" />
         <activity
-            android:name=".GameActivityWithRadioGroup"
-            android:exported="false" />
-        <activity
             android:name=".GameActivityWithSpinner"
             android:exported="false"
             android:configChanges="orientation|screenSize|keyboardHidden"/>

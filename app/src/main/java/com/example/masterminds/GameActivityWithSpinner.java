@@ -37,14 +37,21 @@ public class GameActivityWithSpinner extends AppCompatActivity {
     int [] checkAnswers = new int[9];
     HashMap<String, Integer> unique_answers;
     HashMap<String, Integer> unique_codes;
+
+    long beginning;
+
+    int points;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
         turns = 9; // Player can try that many times.
 
-
+        beginning= System.currentTimeMillis();
+        //Toast.makeText(this , Long.toString(System.currentTimeMillis()) , Toast.LENGTH_LONG).show(); ;
 
         ImageButton bt;
 
@@ -163,7 +170,8 @@ public class GameActivityWithSpinner extends AppCompatActivity {
 
         if (!checkId(view.getId()))
         {
-            tvt.setText("This is not the correct turn.");
+
+            Toast.makeText(this, "This is not the correct turn." , Toast.LENGTH_SHORT ).show();
         }
         else
         {
@@ -423,13 +431,17 @@ public class GameActivityWithSpinner extends AppCompatActivity {
         if (red_index == 4)
         {
 
+            points = 100 - (current_turn-1)*10 ;
 
 
 
+
+            long ending= (System.currentTimeMillis() - beginning)/1000 ;
             Intent i = new Intent(this, Results.class);
-
-
+            i.putExtra("ending", ending);
+            i.putExtra("points", points);
             startActivity(i);
+
 
 
 
@@ -456,6 +468,8 @@ public class GameActivityWithSpinner extends AppCompatActivity {
 
         if (current_turn > turns)
         {
+            points = 0 ;
+
             Dialog dialog = new Dialog(this);
             dialog.setContentView(R.layout.results_loss);
 

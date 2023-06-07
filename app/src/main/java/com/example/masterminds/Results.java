@@ -45,6 +45,14 @@ public class Results extends AppCompatActivity {
 
         playerName = findViewById(R.id.playersName);
 
+        Bundle extras = getIntent().getExtras();
+        long userText = extras.getLong("ending");
+        //Toast.makeText(this , Long.toString(userText) , Toast.LENGTH_LONG).show();
+
+        int points = extras.getInt("points");
+        Toast.makeText(this , Integer.toString(points) , Toast.LENGTH_LONG).show();
+
+
 
         //final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         //drawableShape = new Shape.DrawableShape(drawable, true);
