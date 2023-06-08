@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,8 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 
 
@@ -466,6 +469,14 @@ public class GameActivityWithSpinner extends AppCompatActivity {
 
         current_turn++;
 
+        checkDefeat();
+
+        unique_answers.clear();
+    }
+
+
+    void checkDefeat()
+    {
         if (current_turn > turns)
         {
             points = 0 ;
@@ -473,7 +484,48 @@ public class GameActivityWithSpinner extends AppCompatActivity {
             Dialog dialog = new Dialog(this);
             dialog.setContentView(R.layout.results_loss);
 
-            Button ok = dialog.findViewById(R.id.ok_button_loss);
+            EditText playerName = dialog.findViewById(R.id.players_name_loss);
+
+            MyDBHandler dbHandler = new MyDBHandler(GameActivityWithSpinner.this);
+
+            Button ok_loss = dialog.findViewById(R.id.ok_button_loss);
+
+            Intent i = new Intent(this, MainActivity.class);
+
+            ok_loss.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String playersName = playerName.getText().toString();
+
+                    if (!playersName.equalsIgnoreCase(""))
+                    {
+                        //  Effort found = dbHandler.findEffort(playersName);
+                        //if (found == null)
+                        //{
+                        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                        Date date = new Date();
+                        String dt = formatter.format(date);
+
+
+                        Effort effort = new Effort(playersName, "LOSS", Integer.toString(0),
+                                " - ",dt);
+                        dbHandler.addEffort(effort.getPlayersName(), effort.getResult(), effort.getPoints(), effort.getTime(), effort.getDate());
+                        playerName.setText("");
+                        //}
+
+
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(i);
+                    }
+                }
+            });
+
+
+
+
+
+
+          /*  Button ok = dialog.findViewById(R.id.ok_button_loss);
             Intent i = new Intent(this, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             ok.setOnClickListener(new View.OnClickListener() {
@@ -481,13 +533,11 @@ public class GameActivityWithSpinner extends AppCompatActivity {
                 public void onClick(View v) {
                     startActivity(i);
                 }
-            });
+            });*/
 
 
             dialog.show();
         }
-
-        unique_answers.clear();
     }
 
 
@@ -516,7 +566,11 @@ public class GameActivityWithSpinner extends AppCompatActivity {
                 hidden_code[2] + " " + hidden_code[3], Toast.LENGTH_LONG).show();
     }
 
-
+    public void forceDefeat(View view)
+    {
+        current_turn = 10;
+        checkDefeat();
+    }
 
   /*  @Override
     protected void onSaveInstanceState(Bundle outState)

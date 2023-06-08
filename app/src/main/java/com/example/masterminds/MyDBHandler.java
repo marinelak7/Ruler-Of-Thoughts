@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MyDBHandler extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
 
     private static final String DATABASE_NAME = "effortDb.db";
 
@@ -22,8 +22,13 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_PLAYERNAME = "playername";
 
     public static final String COLUMN_DATE = "date";
+
     public static final String COLUMN_RESULT = "result";
 
+
+    public static final String COLUMN_POINTS = "points";
+
+    public static final String COLUMN_TIME = "time";
 
     public MyDBHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -37,8 +42,10 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 TABLE_EFFORTS + "(" +
                 COLUMN_ID + " INTEGER PRIMARY KEY," +
                 COLUMN_PLAYERNAME + " INTEGER," +
-                COLUMN_DATE + " INTEGER," +
-                COLUMN_RESULT + " INTEGER)";
+                COLUMN_RESULT + " INTEGER," +
+                COLUMN_POINTS + " INTEGER," +
+                COLUMN_TIME + " INTEGER," +
+                COLUMN_DATE + " INTEGER)";
 
         db.execSQL(CREATE_EFFORTS_TABLE);
     }
@@ -52,7 +59,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addEffort(String playerName, String date, String result)
+    public void addEffort(String playerName, String result, String points, String time, String date)
     {
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -60,8 +67,12 @@ public class MyDBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_PLAYERNAME, playerName);
-        values.put(COLUMN_DATE, date);
         values.put(COLUMN_RESULT, result);
+        values.put(COLUMN_POINTS, points);
+        values.put(COLUMN_TIME, time);
+        values.put(COLUMN_DATE, date);
+
+
 
         db.insert(TABLE_EFFORTS, null, values);
         db.close();
@@ -118,7 +129,9 @@ public class MyDBHandler extends SQLiteOpenHelper {
                     effortslist.add(new Effort(
                             cursor.getString(1),
                             cursor.getString(2),
-                            cursor.getString(3)));
+                            cursor.getString(3),
+                            cursor.getString(4),
+                            cursor.getString(5)));
 
             } while (cursor.moveToNext());
         }

@@ -33,7 +33,7 @@
 
             <!--text view for our course duration-->
             <TextView
-                android:id="@+id/status"
+                android:id="@+id/points"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

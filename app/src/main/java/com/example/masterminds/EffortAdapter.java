@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,7 +39,7 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
         Effort effort = effortArrayList.get(position);
         holder.playerName.setText(effort.getPlayersName());
         holder.date.setText(effort.getDate());
-        holder.status.setText(effort.getResult());
+        holder.points.setText(effort.getPoints());
     }
 
     @Override
@@ -52,7 +51,7 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
 
-        private TextView playerName, status, date, dialogtextView;
+        private TextView playerName, points, date, dialogtextView;
         Button ok;
         int position;
 
@@ -60,7 +59,7 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
             super(itemView);
 
             playerName = itemView.findViewById(R.id.playerNames);
-            status = itemView.findViewById(R.id.status);
+            points = itemView.findViewById(R.id.points);
             date = itemView.findViewById(R.id.date);
 
 
@@ -81,10 +80,10 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
                 dialogtextView.setText("Name: " + effort.getPlayersName());
 
                 dialogtextView = dialog.findViewById(R.id.dialog_pointsganed);
-                dialogtextView.setText("Points gained: ");
+                dialogtextView.setText("Points gained: " + effort.getPoints());
 
                 dialogtextView = dialog.findViewById(R.id.dialog_totaltime);
-                dialogtextView.setText("Total time: ");
+                dialogtextView.setText("Total time: " + effort.getTime());
 
                 dialogtextView = dialog.findViewById(R.id.dialog_date);
                 dialogtextView.setText("Date: " + effort.getDate());

@@ -6,36 +6,21 @@
     android:layout_height="match_parent"
     android:background="@drawable/img_1">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="SHOW"
-        android:background="@drawable/bg"
-        android:textColor="@color/white"
-        android:onClick="showEffort"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit_button" />
-
     <TextView
         android:id="@+id/print_result"
-        android:layout_width="239dp"
-        android:layout_height="158dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
-        android:text="YOU WIN\n\nPoints gained:\n\nDifficulty:\n\nNumber of turns:\n\nTotal points:"
+        android:text="YOU WIN"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/points_gained_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintTop_toBottomOf="@+id/konfettiView2" />
 
 
     <Button
@@ -44,12 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
 
+        android:background="@drawable/bg"
         android:onClick="newEffort"
         android:text="Submit"
-        android:background="@drawable/bg"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/konfettiView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playersName" />
 
@@ -70,20 +56,23 @@
         android:hint="Enter a name"
         android:inputType="text"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/submit_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/points_gained_text" />
+
+    <TextView
+        android:id="@+id/points_gained_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Points gained: "
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/playersName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/print_result" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg"
-        android:onClick="removeEffort"
-        android:text="DELETE"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

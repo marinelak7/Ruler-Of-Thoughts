@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -36,23 +37,28 @@ public class Results extends AppCompatActivity {
     EditText playerName;
     Intent i;
 
+    long game_time;
 
-
+    int total_points;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_screen);
 
+
+
+
         playerName = findViewById(R.id.playersName);
 
         Bundle extras = getIntent().getExtras();
-        long userText = extras.getLong("ending");
+        game_time = extras.getLong("ending");
         //Toast.makeText(this , Long.toString(userText) , Toast.LENGTH_LONG).show();
 
-        int points = extras.getInt("points");
-        Toast.makeText(this , Integer.toString(points) , Toast.LENGTH_LONG).show();
+        total_points = extras.getInt("points");
 
 
+        TextView points_gained = findViewById(R.id.points_gained_text);
+        points_gained.setText("Points gained: " + Integer.toString(total_points));
 
         //final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         //drawableShape = new Shape.DrawableShape(drawable, true);
@@ -164,8 +170,11 @@ public class Results extends AppCompatActivity {
             Date date = new Date();
             String dt = formatter.format(date);
 
-            Effort effort = new Effort(playersName, dt,"WIN");
-            dbHandler.addEffort(effort.getPlayersName(), effort.getDate(), effort.getResult());
+            long minutes_game_time = game_time / 60;
+            long seconds_game_time = game_time % 60;
+            Effort effort = new Effort(playersName, "WIN", Integer.toString(total_points),
+                    Long.toString(minutes_game_time) + ":" + Long.toString(seconds_game_time) + " mins",dt);
+            dbHandler.addEffort(effort.getPlayersName(), effort.getResult(), effort.getPoints(), effort.getTime(), effort.getDate());
             playerName.setText("");
             //}
 

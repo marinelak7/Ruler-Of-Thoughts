@@ -99,6 +99,18 @@ public class Statistics extends AppCompatActivity {
         {
             sort = " ORDER BY " + MyDBHandler.COLUMN_ID;
         }
+        else if (sortType.equalsIgnoreCase("-Names A-Z"))
+        {
+            sort = " ORDER BY " + MyDBHandler.COLUMN_PLAYERNAME;
+        }
+        else if (sortType.equalsIgnoreCase("-Names Z-A"))
+        {
+            sort = " ORDER BY " + MyDBHandler.COLUMN_PLAYERNAME + " DESC";
+        }
+        else if (sortType.equalsIgnoreCase("-Most points"))
+        {
+            sort = " ORDER BY " + MyDBHandler.COLUMN_POINTS + " DESC";
+        }
 
 
         efforts = dbHandler.readEfforts(sort);
