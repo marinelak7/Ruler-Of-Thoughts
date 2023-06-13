@@ -1,26 +1,45 @@
 package com.example.masterminds;
 
+
+
+// The Effort class will be used to store the database values so
+// that we can handle them with an easier way.
 public class Effort {
 
 
 
+    // The id of this database entry.
     private int _id;
 
+
+    // The name that the player chose.
     private String _players_name;
 
+
+    // Store whether the player won or lost.
     private String _result;
 
+
+    // Store when was the game played.
     private String _date;
 
+
+    // Store the number of points the player gained.
     private String _points;
 
+
+    // Store how much did the player took to finish the game.
     private String _time;
 
+
+    // Empty constructor.
     public Effort()
     {
 
     }
 
+
+    // The constructor of the class.
     public Effort(String players_name, String result, String points, String time, String date)
     {
         _players_name = players_name;
@@ -30,6 +49,9 @@ public class Effort {
         _date = date;
     }
 
+
+    // Setters and getter for our members.
+    //
     public void setID(int id) {_id = id;}
 
     public int getID() {return _id;}

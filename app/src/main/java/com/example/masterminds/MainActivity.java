@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toolbar;
 
+
+// Main Menu Activity
+//
 public class MainActivity extends AppCompatActivity {
 
 
@@ -21,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         quitbtn = findViewById(R.id.quitbtn);
+
+
+        // Selecting the "QUIT" button, will terminate the app.
         quitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,12 +40,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    // Selecting the "NEW GAME" option, the application will start
+    // a new screen where the game will take place.
     public void newGame(View view)
     {
         Intent i = new Intent(MainActivity.this, GameActivityWithSpinner.class);
         startActivity(i);
     }
 
+
+
+    // Selecting the "VIEW STATISTICS" option, the application will start
+    // a new screen, where the player can view previous tries and also, sort them.
 
     public void viewStatistics(View view) {
 
@@ -48,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+    // Selecting the question mark on the top right of the screen,
+    // the player can view the rules of the game.
     public void viewRules(View view)
     {
         Intent i = new Intent(this, rules.class);

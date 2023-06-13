@@ -13,6 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+
+
+// The adapter class for our recycler.
 public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder> {
 
 
@@ -20,12 +23,14 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
     private Context context;
 
 
+    // Constructor of the class.
     public EffortAdapter(ArrayList<Effort> effortArrayList, Context context)
     {
         this.effortArrayList = effortArrayList;
         this.context = context;
     }
 
+    // Inflating the layout with a recycler view.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
@@ -34,6 +39,7 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
         return new ViewHolder(view);
     }
 
+    // Showing the stats for this particular recycler.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Effort effort = effortArrayList.get(position);
@@ -48,6 +54,7 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
     }
 
 
+    // Showing the results for this effort in a recycler.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
 
@@ -63,7 +70,9 @@ public class EffortAdapter extends RecyclerView.Adapter<EffortAdapter.ViewHolder
             date = itemView.findViewById(R.id.date);
 
 
-
+            // By choosing the "DETAILS" button for this particular try,
+            // will show a dialog, where the user can see all the stats
+            // that are being stored.
 
             itemView.findViewById(R.id.details).setOnClickListener(View ->
             {

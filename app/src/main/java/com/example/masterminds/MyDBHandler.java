@@ -9,33 +9,54 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+
+// This class handles the database of the app
 public class MyDBHandler extends SQLiteOpenHelper {
 
+
+    // Current version of the database.
     private static final int DATABASE_VERSION = 4;
 
+
+    // The name of this database.
     private static final String DATABASE_NAME = "effortDb.db";
 
+
+    // The name of this table.
     public static final String TABLE_EFFORTS = "efforts";
 
+
+    // Name of the column that holds the ids of the efforts.
     public static final String COLUMN_ID = "_id";
 
+
+    // Name of the column that holds the names of the players.
     public static final String COLUMN_PLAYERNAME = "playername";
 
+
+
+    // Name of the column that holds when the efforts were made.
     public static final String COLUMN_DATE = "date";
 
+
+    // Name of the columb that holds the result (win or loss) of the efforts.
     public static final String COLUMN_RESULT = "result";
 
-
+    // Name of the column that holds the points of the efforts.
     public static final String COLUMN_POINTS = "points";
 
+    // Name of the columb that holds how much time it took for the efforts
+    // to complete.
     public static final String COLUMN_TIME = "time";
 
+    // Constructor of the class
     public MyDBHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
 
 
+    // Creating our database.
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_EFFORTS_TABLE = "CREATE TABLE " +
@@ -52,6 +73,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
 
 
+    // The upgrade method for the database.
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
@@ -59,6 +81,8 @@ public class MyDBHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    // This method will be used to store new efforts, when the efforts
+    // are completed.
     public void addEffort(String playerName, String result, String points, String time, String date)
     {
 
@@ -78,46 +102,13 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public Effort findEffort(String playername) {
-        String query = "SELECT * FROM " + TABLE_EFFORTS + " WHERE " +
-                COLUMN_PLAYERNAME + " = '" + playername + "'";
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(query, null);
-        Effort effort = new Effort();
-        if (cursor.moveToFirst()) {
-            cursor.moveToFirst();
-            effort.setID(Integer.parseInt(cursor.getString(0)));
-            effort.setPlayersName(cursor.getString(1));
-            effort.setResult(cursor.getString(2));
-            cursor.close();
-        } else {
-            effort = null;
-        }
-        db.close();
-        return effort;
-    }
-
-
-    public boolean deleteEffort(String playername)
-    {
-        boolean res = false;
-        Effort effort = findEffort(playername);
-        if (effort != null)
-        {
-            SQLiteDatabase db = this.getWritableDatabase();
-            db.delete(TABLE_EFFORTS, COLUMN_ID + " = ?",
-                    new String[] { String.valueOf(effort.getID())});
-            res = true;
-            db.close();
-        }
-        return res;
-    }
-
+    // This method will return an ArrayList with the values of the database
+    // being stored in Effort objects.
     public ArrayList<Effort> readEfforts(String sortType)
     {
         SQLiteDatabase db = this.getReadableDatabase();
 
-
+        // Sort the efforts with the selected sort type from the user.
         String str = " ORDER BY " + MyDBHandler.COLUMN_ID + " DESC";
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_EFFORTS + sortType , null);
         //String str = + " ORDER BY " + COLUMN_DATE + " DESC";
@@ -141,6 +132,9 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
 
+
+    // Method of the "DELETE ALL TRIES" button, to delete all efforts from
+    // the database, if the player has agreed to the according message (dialog).
     public void deleteAll()
     {
         SQLiteDatabase db = this.getWritableDatabase();

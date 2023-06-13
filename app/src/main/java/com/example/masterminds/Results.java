@@ -27,6 +27,9 @@ import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
 import nl.dionsegijn.konfetti.core.models.Shape;
 import nl.dionsegijn.konfetti.xml.KonfettiView;
 
+
+// If the player has won, they will transferred to the
+// result screen, and the code will continue to Results class.
 public class Results extends AppCompatActivity {
 
 
@@ -37,8 +40,12 @@ public class Results extends AppCompatActivity {
     EditText playerName;
     Intent i;
 
+
+    // The time that took for the player to finish the game.
     long game_time;
 
+    // The points of this game that depend on which turn the
+    // game was finished.
     int total_points;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,97 +57,31 @@ public class Results extends AppCompatActivity {
 
         playerName = findViewById(R.id.playersName);
 
+
+        // Getting the values of the player's stats that were sent from
+        // the GameActivitySpinner class.
         Bundle extras = getIntent().getExtras();
         game_time = extras.getLong("ending");
-        //Toast.makeText(this , Long.toString(userText) , Toast.LENGTH_LONG).show();
+
 
         total_points = extras.getInt("points");
 
-
+        // Showing the results to the player.
         TextView points_gained = findViewById(R.id.points_gained_text);
         points_gained.setText("Points gained: " + Integer.toString(total_points));
 
-        //final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
-        //drawableShape = new Shape.DrawableShape(drawable, true);
+
         Button ok = findViewById(R.id.submit_button);
         i = new Intent(this, MainActivity.class);
-       /* ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
+        // A confetti animation to celebrate the player's victory.
+        // See dependecies for more.
+        //
 
-                startActivity(i);
-            }
-        });*/
 
         final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_heart);
         drawableShape = new Shape.DrawableShape(drawable, true);
         konfettiView = findViewById(R.id.konfettiView2);
-
-        // 1ST WAY
-        //
-
-
-        /*
-
-        EmitterConfig emitterConfig = new Emitter(5L, TimeUnit.SECONDS).perSecond(50);
-        Party party = new PartyFactory(emitterConfig)
-                .angle(270)
-                .spread(90)
-                .setSpeedBetween(1f, 5f)
-                .timeToLive(2000L)
-                .shapes(new Shape.Rectangle(0.2f), drawableShape)
-                .sizes(new Size(12, 5f, 0.2f))
-                .position(0.0, 0.0, 1.0, 0.0)
-                .build();
-        //konfettiView.setOnClickListener(view ->
-        konfettiView.start(party);
-*/
-
-        // 2ND WAY
-        //
-
-
-        /*EmitterConfig emitterConfig = new Emitter(100L, TimeUnit.MILLISECONDS).max(100);
-        konfettiView.start(
-                new PartyFactory(emitterConfig)
-                        .spread(360)
-                        .shapes(Arrays.asList(Shape.Square.INSTANCE, Shape.Circle.INSTANCE, drawableShape))
-                        .colors(Arrays.asList(0xfce18a, 0xff726d, 0xf4306d, 0xb48def))
-                        .setSpeedBetween(0f, 30f)
-                        .position(new Position.Relative(0.5, 0.3))
-                        .build()
-        );*/
-
-
-
-        // 3RD WAY
-        //
-
-        /*
-        EmitterConfig emitterConfig = new Emitter(5, TimeUnit.SECONDS).perSecond(30);
-        konfettiView.start(
-                new PartyFactory(emitterConfig)
-                        .angle(Angle.RIGHT - 45)
-                        .spread(Spread.SMALL)
-                        .shapes(Arrays.asList(Shape.Square.INSTANCE, Shape.Circle.INSTANCE, drawableShape))
-                        .colors(Arrays.asList(0xfce18a, 0xff726d, 0xf4306d, 0xb48def))
-                        .setSpeedBetween(10f, 30f)
-                        .position(new Position.Relative(0.0, 0.5))
-                        .build(),
-                new PartyFactory(emitterConfig)
-                        .angle(Angle.LEFT + 45)
-                        .spread(Spread.SMALL)
-                        .shapes(Arrays.asList(Shape.Square.INSTANCE, Shape.Circle.INSTANCE, drawableShape))
-                        .colors(Arrays.asList(0xfce18a, 0xff726d, 0xf4306d, 0xb48def))
-                        .setSpeedBetween(10f, 30f)
-                        .position(new Position.Relative(1.0, 0.5))
-                        .build()
-        );*/
-
-
-        // 4TH WAY
-        //
 
 
         EmitterConfig emitterConfig = new Emitter(5, TimeUnit.SECONDS).perSecond(100);
@@ -156,28 +97,38 @@ public class Results extends AppCompatActivity {
         );
     }
 
+
+    // Pressing the "SUMBIT" button will add a new effort
+    // to our database.
     public void newEffort(View view)
     {
         MyDBHandler dbHandler = new MyDBHandler(Results.this);
         String playersName = playerName.getText().toString();
 
+
+        // Check if the player's name is blank.
         if (!playersName.equalsIgnoreCase(""))
         {
-          //  Effort found = dbHandler.findEffort(playersName);
-            //if (found == null)
-            //{
+
+            // Find the current time and date that the game was played.
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             Date date = new Date();
             String dt = formatter.format(date);
 
+
+            // Convert the game's time to minutes and seconds.
             long minutes_game_time = game_time / 60;
             long seconds_game_time = game_time % 60;
+
+            // Store the data to an Effort object, and add the values to the database.
             Effort effort = new Effort(playersName, "WIN", Integer.toString(total_points),
                     Long.toString(minutes_game_time) + ":" + Long.toString(seconds_game_time) + " mins",dt);
             dbHandler.addEffort(effort.getPlayersName(), effort.getResult(), effort.getPoints(), effort.getTime(), effort.getDate());
             playerName.setText("");
             //}
 
+            // The player will be send to the main menu screen,
+            // removing the previous activities.
             Intent i = new Intent(this, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
@@ -188,34 +139,5 @@ public class Results extends AppCompatActivity {
 
 
 
-    public void removeEffort (View view)
-    {
-        MyDBHandler dbHandler = new MyDBHandler(Results.this);
-        boolean result = dbHandler.deleteEffort(playerName.getText().toString());
-        if (result)
-        {
-            Toast.makeText(this, "Deleted", Toast.LENGTH_LONG).show();
-            playerName.setText("");
 
-        }
-        else{
-            Toast.makeText(this, "Not found", Toast.LENGTH_LONG).show();
-            playerName.setText("");
-        }
-    }
-    private ArrayList<Effort> effortArrayList;
-  /*  public void showEffort(View view)
-    {
-
-        effortArrayList = new ArrayList<>();
-
-        MyDBHandler dbHandler = new MyDBHandler(Results.this);
-
-        effortArrayList = dbHandler.readEfforts();
-
-
-        Toast.makeText(this, effortArrayList.get(0).getPlayersName() + " "
-                 + effortArrayList.get(0).getResult(), Toast.LENGTH_LONG).show();
-
-    }*/
 }

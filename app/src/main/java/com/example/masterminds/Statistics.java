@@ -18,11 +18,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
+
+// The class that handles the representation of
+// the database's values.
 public class Statistics extends AppCompatActivity {
 
+
+    // The values of our database will be stored in objects of the class Effort.
     private ArrayList<Effort> efforts;
     private MyDBHandler dbHandler;
+
+
+    // Declaring an adapter for our efforts.
     private EffortAdapter effortAdapter;
+
+
+    // Representing our data with recycler.
     private RecyclerView effortRecyclerView;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -30,9 +41,12 @@ public class Statistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.statistics);
 
-
+        // Spinner with the sort options.
         Spinner sort_spinner = findViewById(R.id.sort_type);
 
+
+        // Check which sort option was selected and call
+        // the printItems method.
         sort_spinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -53,19 +67,26 @@ public class Statistics extends AppCompatActivity {
 
     }
 
+
+    // Method for the "DELETE ALL TRIES" button.
     public void delete(View view)
     {
 
-
+        // Dialog with two options, whether the user
+        // wants to delete all the efforts or not.
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_delete_tries);
 
         Button button1 = dialog.findViewById(R.id.yes_delete);
         Button button2 = dialog.findViewById(R.id.no_delete);
 
+
+
+        // The onClick ability of the "YES" button in the dialog.
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Deleting all our tries, and refreshing our statistics screen.
                 dbHandler = new MyDBHandler(Statistics.this);
                 dbHandler.deleteAll();
                 Intent i = new Intent(Statistics.this, Statistics.class);
@@ -74,6 +95,10 @@ public class Statistics extends AppCompatActivity {
             }
         });
 
+
+
+        // If the player chooses not to delete all tries, the dialog
+        // will close.
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,11 +110,21 @@ public class Statistics extends AppCompatActivity {
 
     }
 
+
+    // This method will show the values of our database in the screen
+    // and also will sort them depending on the user's choice.
     protected void printItems(String sortType)
     {
+
+        // The values of the database will be stored here.
         efforts = new ArrayList<>();
+        // Creating a handled for the database.
         dbHandler = new MyDBHandler(Statistics.this);
 
+
+
+        // Check which sort type was selected and sort
+        // the values accordingly.
         String sort = "";
         if (sortType.equalsIgnoreCase("-Newest"))
         {
@@ -112,12 +147,15 @@ public class Statistics extends AppCompatActivity {
             sort = " ORDER BY " + MyDBHandler.COLUMN_POINTS + " DESC";
         }
 
-
+        // Initializing our effort arraylist with the database contents,
+        // being send in an arraylist.
         efforts = dbHandler.readEfforts(sort);
 
+        // Initializing the adapter for our recycler.
         effortAdapter = new EffortAdapter(efforts, Statistics.this);
         effortRecyclerView = findViewById(R.id.effortsRecycler);
 
+        // Initializing a layout for the recycler.
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Statistics.this, RecyclerView.VERTICAL, false);
         effortRecyclerView.setLayoutManager(linearLayoutManager);
 

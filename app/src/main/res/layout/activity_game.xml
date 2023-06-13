@@ -1081,13 +1081,14 @@
             app:layout_constraintTop_toBottomOf="@+id/turn_9" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/show_answer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:onClick="showAnswer"
             android:text="SHOW\nANSWER"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -1155,6 +1156,7 @@
             android:layout_marginEnd="24dp"
             android:onClick="forceDefeat"
             android:text="FORCE\nDEFEAT"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

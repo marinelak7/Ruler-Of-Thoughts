@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 
 
+
+// The class that handles the concept of the rules.
 public class rules extends AppCompatActivity{
     // Declaring TextView from the Layout
     TextView textview;
@@ -43,6 +45,9 @@ public class rules extends AppCompatActivity{
     }
 
 
+
+    // The "SKIP" button will send the player to the main menu screen,
+    // deleting previous activities.
     public void Skip (View view) {
         Intent i = new Intent(this , MainActivity.class) ;
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
