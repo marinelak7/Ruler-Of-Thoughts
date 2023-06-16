@@ -36,7 +36,7 @@ public class GameActivityWithSpinner extends AppCompatActivity {
     TextView tvt;
 
     // This two dimension array will hold the positions of
-    // all the tries.
+    // all the tries and the colour that the player chooses.
     Pegs [][] pos = new Pegs[9][4];
 
     // The player must find the hidden colours and their according positions,
